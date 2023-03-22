@@ -3,7 +3,10 @@ export class PodcastService {
     "https://itunes.apple.com/us/rss/toppodcasts/limit=100/genre=1310/json";
   constructor() {}
   async getAll() {
-    const response = await fetch(this.baseUrl, { method: "GET" });
+    const response = await fetch(this.baseUrl, {
+      method: "GET",
+      next: { revalidate: 60 * 60 * 24 },
+    });
     if (!response.ok) return new Error("Error API");
     const res = await response.json();
     const podcasts = res.feed.entry;
