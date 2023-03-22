@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto Condensed';
+    margin-bottom: 15px;
 }
 
 h1{
@@ -19,5 +20,6 @@ h1{
     padding-top: 40px;
     padding-inline: 20px;
     gap: 20px;
+    row-gap: 30px;
     grid-template-columns: repeat(4, minmax(0,1fr));
 }
