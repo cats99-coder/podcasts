@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Condensed';
 }
 
 h1{
@@ -9,4 +12,12 @@ h1{
 
 :root {
     --blue: #62798b
+}
+
+.container-podcasts {
+    display: grid;
+    padding-top: 40px;
+    padding-inline: 20px;
+    gap: 20px;
+    grid-template-columns: repeat(4, minmax(0,1fr));
 }
