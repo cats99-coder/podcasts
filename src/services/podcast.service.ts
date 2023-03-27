@@ -12,4 +12,16 @@ export class PodcastService {
     const podcasts = res.feed.entry;
     return podcasts;
   }
+  async getOne(id: string): Promise<Array<any> | Error> {
+    const response = await fetch(
+      `https://itunes.apple.com/lookup?id=${id}&media=podcast&entity=podcastEpisode`,
+      {
+        method: "GET",
+      }
+    );
+    if (!response.ok) return new Error("Error API");
+    const res: { results: [Object] } = await response.json();
+    const collection = res.results;
+    return collection;
+  }
 }

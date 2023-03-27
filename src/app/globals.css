@@ -1,25 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap");
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Condensed';
-    margin-bottom: 15px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed";
+  margin-bottom: 15px;
 }
 
-h1{
-    margin: 0;
+h1 {
+  margin: 0;
 }
-
+.cursor-pointer {
+  cursor: pointer;
+}
 :root {
-    --blue: #62798b
+  --blue: #62798b;
 }
 
 .container-podcasts {
-    display: grid;
-    padding-top: 40px;
-    padding-inline: 20px;
-    gap: 20px;
-    row-gap: 30px;
-    grid-template-columns: repeat(4, minmax(0,1fr));
+  display: grid;
+  padding-top: 40px;
+  padding-inline: 20px;
+  gap: 20px;
+  row-gap: 30px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.container-podcast {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding: 15px;
+  column-gap: 70px;
+  padding-inline: 70px;
+}
+.card-podcast {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  row-gap: 10px;
+}
+.card-podcast img {
+    align-self: center;
+  }
+.card-podcast span.tittle {
+  font-weight: 700;
+  color: black;
+  font-size: 18px;
+}
+.col-span-2 {
+    grid-column: auto / span 2;
+}
+.card-podcast span.description {
+    font-weight: 700;
+    color: black;
+    font-size: 14px;
+  }
+.card-podcast span.author {
+    font-style: italic;
+  }
+.font-extrabold {
+    font-weight: 700;
+}
+.episodes {    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+    font-weight: 700;
+    padding: 15px;
+    margin-bottom: 25px;
+}
+.list-episodes {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    
+}
+.list-episodes-header {
+    display: flex;
+    font-weight: 700;
+    column-gap: 30px;
+    padding-inline: 10px;
+    border-bottom: 2px solid rgb(123, 121, 121);
+}
+.list-episodes-lines {
+    display: flex;
+    column-gap: 30px;
+    padding-block: 10px;
+    padding-inline: 10px;
+}
+.list-episodes-lines:nth-child(even) {
+    background-color: cornsilk;
+}
+.grow {
+    flex-grow: 1;
 }
