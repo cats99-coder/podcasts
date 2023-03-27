@@ -11,6 +11,7 @@ export default async function Home() {
             return (
               <Card
                 key={podcast["id"]["attributes"]["im:id"]}
+                id={podcast["id"]["attributes"]["im:id"]}
                 src={podcast["im:image"][2]["label"]}
                 alt={podcast["im:name"]["label"]}
                 author={podcast["im:artist"]["label"]}
